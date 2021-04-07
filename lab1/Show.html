@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="resources/css/Show.css" media="all">
     <meta charset="UTF-8">
     <title>Show</title>
 </head>
 <body>
-<style>
-    li{
-        display: inline-block;
-    }
-</style>
 <header>
-    <div>
-        <div style="float: left">Art Store</div>
-        <div style="float: right;display: inline-block;float: right">
+    <div class="nav">
+        <div class="nav_first">Art Store</div>
+        <div class="nav_second">
             <ul>
                 <li>
                     <a href="Home.html">首页</a>
+                </li>
+                <li>
+                    <a href="Search.html">搜索</a>
                 </li>
                 <li>
                     <a href="LogIn.html">登录</a>
@@ -28,25 +27,28 @@
         </div>
     </div>
 </header>
-<div>
-    <p style="text-align: center;">Woman with a Hat</p>
-    <p style="text-align: center;">Artist : Henri Matisse</p>
+<hr>
+<div class="img">
+    <img src="resources/img/177.jpg" width="300" height="450">
 </div>
-<div style="float: left;">
-    <img src="resources/img/177.jpg">
-</div>
-<div style="float: left;">
-    <div>Time : Painted on 17 October 1905</div>
-    <div>Price : $5,000,000</div>
-    <div>The pictures gained considerable condemnation,
-        such as "A pot of paint has been flung in the face of the public" from the critic Camil<br>le Mauclair,
+<div class="side">
+    <div class="name">
+        <a>Woman with a Hat</a>
+    </div>
+    <div class="author">
+        <a href="Search.html">Artist : Henri Matisse</a>
+    </div>
+    <div class="time">Time : Painted on 17 October 1905</div>
+    <div class="price">Price : $5,000,000</div>
+    <div class="description">The pictures gained considerable condemnation,
+        such as "A pot of paint has been flung in the face of the public" from the critic Camille Mauclair,
         but also some favorable attention.
     </div>
-    <button>Add to Collection</button>
+    <button class="button">Add to Collection</button>
 </div>
 <footer>
-    <div>
-        <p style="text-align: center">@Art Store 复旦大学版权所有 All rights reserved</p>
+    <div class="footer">
+        <p>@Art Store 复旦大学版权所有 All rights reserved</p>
     </div>
 </footer>
 </body>

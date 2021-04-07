@@ -1,90 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="resources/css/Home.css" media="all">
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-<style type="text/css">
-    ul li {
-        display: inline-block;
-    }
-    .nav{
-        display: inline-block;
-    }
-</style>
 <header>
     <div class="nav">
-        <div style="float: left">
+        <div class="nav_first">
             Art Store
         </div>
-        <div style="float: left">
+        <div class="nav_second">
             Here is a website where you can find the best one
         </div>
-        <div style="float: right;display: inline-block;float: right">
+        <div class="nav_third">
             <ul>
                 <li>
-                    <a href="Home.html">首页</a>
+                    <a href="Home.html">首页 </a>
                 </li>
                 <li>
-                    <a>搜索</a>
+                    <a href="Search.html">搜索 </a>
                 </li>
                 <li>
-                    <a href="Show.html">详情</a>
+                    <a href="Show.html">详情 </a>
                 </li>
                 <li>
-                    <a href="LogIn.html">登录</a>
+                    <a href="LogIn.html">登录 </a>
                 </li>
                 <li>
-                    <a href="Register.html">注册</a>
+                    <a href="Register.html">注册 </a>
                 </li>
             </ul>
         </div>
     </div>
 </header>
-<div>
-    <p style="text-align: center;"><img src="resources/img/28.jpg"></p>
+<hr>
+<div class="nav2">
+    <div class="box_big">
+        <div class="box"><a href="Show.html"><img src="resources/img/28.jpg" width="600" height="400"></a></div>
+        <div class="box"><a href="Show.html"><img src="resources/img/29.jpg" width="600" height="400"></a></div>
+        <div class="box"><a href="Show.html"><img src="resources/img/31.jpg" width="600" height="400"></a></div>
+        <div class="box"><a href="Show.html"><img src="resources/img/32.jpg" width="600" height="400"></a></div>
+    </div>
+    <div class="spot">
+        <div class="spot_list">1</div>
+        <div class="spot_list">2</div>
+        <div class="spot_list">3</div>
+        <div class="spot_list">4</div>
+    </div>
+    <div class="btn">
+        <div class="left_btn"><span> < </span></div>
+        <div class="right_btn"><span> > </span></div>
+    </div>
 </div>
-<div>
-    <div style="float: left">
-        <img src="resources/img/6.jpg">
-        <div>The Actor</div>
-        <div>Pablo Picasso</div>
-        <div>over another painting, because <br>
+<hr>
+<div class="nav3">
+    <div class="nav3_left">
+        <a href="Show.html"><img src="resources/img/6.jpg" width="200" height="200" class="img"></a>
+        <div class="name">The Actor</div>
+        <div class="author">Pablo Picasso</div>
+        <div class="description">over another painting, because
             he could not afford new canvases at the time.<br>
         </div>
-        <div>
+        <div class="link">
             <a href="Show.html">Learn More</a>
         </div>
     </div>
-    <div style="float: left">
-        <img src="resources/img/18.jpg">
-        <div>Portrait of Dora Maar</div>
-        <div>Pablo Picasso</div>
-        <div>The canvas was one of many portraits of Dora Maar painted by
-            <br> Pablo Picasso over their nearly decade-long<br>
+    <div class="nav3_center">
+        <a href="Show.html"><img src="resources/img/18.jpg" width="200" height="200" class="img"></a>
+        <div class="name">Portrait of Dora Maar</div>
+        <div class="author">Pablo Picasso</div>
+        <div class="description">The canvas was one of many portraits of Dora Maar painted by
+             Pablo Picasso over their nearly decade-long<br>
         </div>
-        <div>
+        <div class="link">
             <a href="Show.html">Learn More</a>
         </div>
     </div>
-    <div style="float: left">
-        <img src="resources/img/60.jpg">
-        <div>Sunflowers</div>
-        <div>Vincent Van Gogh</div>
-        <div>(original title, in French: Tournesols) are the subject of two series of still life paintings <br>by the Dutch
-            painter Vincent van Gogh.<br>
+    <div class="nav3_right">
+        <a href="Show.html"><img src="resources/img/60.jpg" width="200" height="200" class="img"></a>
+        <div class="name">Sunflowers</div>
+        <div class="author">Vincent Van Gogh</div>
+        <div class="description">(original title, in French: Tournesols) are the subject of two series of still life paintings by the
+            Dutch painter Vincent van Gogh.<br>
         </div>
-        <div>
+        <div class="link">
             <a href="Show.html">Learn More</a>
         </div>
     </div>
 </div>
 <footer>
-    <div>
-        <p style="text-align: center">@Art Store 复旦大学版权所有 All rights reserved</p>
-    </div>
+    <p class="footer">@Art Store 复旦大学版权所有 All rights reserved</p>
 </footer>
-
 </body>
+<script>
+    var box = document.getElementsByClassName("box_big")[0];
+    var spot = document.getElementsByClassName("spot_list");
+    var block = document.getElementsByClassName("nav2")[0];
+    var left_btn = document.getElementsByClassName("left_btn")[0];
+    var right_btn = document.getElementsByClassName("right_btn")[0];
+    var time = null;
+    spot[0].style.background = "rgba(91,91,91,0.8)";
+    var count = 0;
+    showtime();
+    //鼠标进入计时器停止
+    block.onmouseenter = function () {
+        clearInterval(time);
+    };
+    //鼠标出来计时器打开
+    block.onmouseleave = function () {
+        showtime();
+    };
+    //点的事件
+    for (var i = 0; i < spot.length; i++) {
+        spot[i].index = i;
+        spot[i].onmouseenter = function () {
+            spot[count].style.background = "rgba(255, 255, 255, 0.3)";
+            this.style.background = "rgba(91,91,91,0.8)";
+            count = this.index;
+            box.style.marginLeft = (count * -700) + "px";
+        }
+
+    }
+    //图片右边划
+    right_btn.onclick = function () {
+        spot[count].style.backgroundColor = "rgba(255,255,255,0.3)";
+        count++;
+        if (count > 3) {
+            box.className = "box_big";
+            count = box.children.length - 4;
+            box.style.marginLeft = "-3500px";
+        }
+        setTimeout(function () {
+            box.className = "box_big nav";
+            box.style.marginLeft = (-700 * count) + "px";
+            spot[count].style.backgroundColor = "rgba(91,91,91,0.8)";
+        }, 1);
+    };
+    //图片左边划
+    left_btn.onclick = function () {
+        spot[count].style.backgroundColor = "rgba(255,255,255,0.3)";
+        count--;
+        if (count < 0) {
+            box.className = "box_big";
+            count = box.children.length -1;
+            box.style.marginLeft = "-3500px";
+        }
+        setTimeout(function () {
+            box.className = "box_big nav";
+            box.style.marginLeft = (-700 * count) + "px";
+            spot[count].style.backgroundColor = "rgba(91,91,91,0.8)";
+        }, 1);
+    };
+    //计时器
+    function showtime() {
+        time = setInterval(function () {
+            mate();
+        }, 1000);
+    }
+</script>
 </html>

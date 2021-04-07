@@ -1,0 +1,63 @@
+ul li{
+    display: inline-block
+}
+.nav_first{
+    float: left;
+    color: deepskyblue;
+    font-size:20pt ;
+    font-style: italic;
+}
+.nav_second{
+    text-align: right;
+}
+.img{
+    float: left;
+    overflow: hidden;
+    margin-left: 300px;
+    /*width: 200px;*/
+    /*height: 300px;*/
+    transition:all 0.5s ease-out;
+}
+.img:hover{
+    transform:scale(1.5);
+}
+.side {
+    margin-left: 500px;
+    padding: 150px 300px;
+}
+.name{
+    text-align: center;
+    font-style: italic;
+    color: darkgreen;
+}
+.author{
+    text-align: center;
+    font-style: italic;
+    color: deepskyblue;
+}
+.time{
+    text-align: center;
+}
+.price{
+    text-align: center;
+    color: burlywood;
+}
+.description{
+    width: 300px;
+    text-align: center;
+}
+.button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.footer{
+    text-align: center;
+    bottom: 0;
+    color: white;
+    background-color: black;
+}
