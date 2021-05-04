@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="resources/css/Collection.css" media="all">
+    <script src="resources/js/Collection.js"></script>
     <meta charset="UTF-8">
     <title>collection</title>
 </head>
@@ -59,8 +60,8 @@
         <p>性别：</p>
     </div>
 </div>
-<div class="collection">
-        <div class="img1">
+<div class="collection" id="collection">
+        <div class="img1" id="img1">
             <div class="img">
                 <img src="resources/img/40.jpg" width="100" height="100">
             </div>
@@ -71,12 +72,16 @@
                 <div class="name">
                     Luncheon Boating Party
                 </div>
+                <div class="price">Price : $4,000,000</div>
                 <div class="description">
                     The painting depicts a group of Renoir\'s friends relaxing on...
                 </div>
             </div>
+            <div>
+                <button class="button1" onclick="kill()" >delete</button>
+            </div>
         </div>
-        <div class="img2">
+        <div class="img2" id="img2">
             <div class="img">
                 <img src="resources/img/42.jpg" width="100" height="100">
             </div>
@@ -87,9 +92,13 @@
                 <div class="name">
                     Glass of Absinthe
                 </div>
+                <div class="price">Price : $5,000,000</div>
                 <div class="description">
                     (English: The Absinthe Drinker or Glass of Absinthe) is a painting by Edgar Degas...
                 </div>
+            </div>
+            <div>
+                <button class="button2" onclick="kill2()">delete</button>
             </div>
         </div>
 </div>

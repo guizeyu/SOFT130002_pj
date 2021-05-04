@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="resources/css/Register.css" media="all">
+    <script src="resources/js/Register.js"></script>
     <meta charset="UTF-8">
     <title>register</title>
 </head>
@@ -11,22 +12,22 @@
         Art Store
     </a>
 </div>
-<div class="login">
+<div class="register">
     <div>Art Store</div>
     <div>请输入用户名和密码</div>
     <div>
         用户名 ：
-        <input id="用户名" type="text">
+        <input id="username" type="text">
     </div>
     <div>
         密码  ：
-        <input id="密码" type="password">
+        <input id="password" type="password">
     </div>
     <div>
         确认密码：
-        <input id="确认密码" type="password">
+        <input id="confirm" type="password">
     </div>
-    <button class="button">注册</button>
+    <button class="button" onclick="message()">注册</button>
     <div>
         <a href="LogIn.html">
             已有账号，点此登陆

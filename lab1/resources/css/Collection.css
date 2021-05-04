@@ -90,9 +90,34 @@ ul li {
     color: deepskyblue;
 }
 
+.price{
+    text-align: center;
+    color: burlywood;
+}
+
 .description {
     /*width: 300px;*/
     text-align: center;
+}
+
+.button1{
+    padding: 5px 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.button2{
+    padding: 5px 20px;
+    border-radius: 5px;
+    float: right;
+}
+.button1:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.button2:hover{
+    background-color: red;
+    cursor: pointer;
 }
 .footer {
     margin: auto 100px;
