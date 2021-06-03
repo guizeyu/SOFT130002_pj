@@ -118,6 +118,7 @@ a:hover{
     text-align: center;
     font-style: italic;
     color: darkgreen;
+    width: 200px;
 }
 .author{
     text-align: center;
@@ -126,7 +127,13 @@ a:hover{
 }
 .description{
     text-align: center;
-    width: 150px;
+    width: 200px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden
 }
 .link{
     text-align: center;

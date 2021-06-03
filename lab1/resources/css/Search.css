@@ -74,6 +74,12 @@ ul li {
 .description {
     /*width: 300px;*/
     text-align: center;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden
 }
 /*下拉按钮*/
 .sort{
