@@ -59,47 +59,36 @@ if ($con->connect_error) {
     </form>
     <?php
     $key = $_GET['key'];
+//    $key = $_GET['num'];
     $result = mysqli_query($con, "SELECT * FROM artworks
 WHERE title like '%$key%' ORDER BY price");
-    $row = mysqli_fetch_array($result);
     ?>
     <div class="result">
         <button class="sort">结果排序方式</button>
         <div class="result-content">
             <a href="Search.php">浏览量排序</a>
-            <a href="Search2.php">价格排序</a>
+            <a href="#">价格排序</a>
         </div>
     </div>
 </div>
-<div class="img1">
-    <div class="img">
-        <?php
-        echo "<img src='resources/img/" . $row['imageFileName'] . "'width='200' height='200'>"
-        ?>
-    </div>
+<?php
+for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+    $row[$i] = mysqli_fetch_array($result);
+    $author = $row[$i]['artist'];
+    $name = $row[$i]['title'];
+    $price = $row[$i]['price'];
+    $description = $row[$i]['description'];
+    echo "<div class='img1'>
+    <div class='img'><img src='resources/img/" . $row[$i]['imageFileName'] . "'width='200' height='200'></div>
     <div class='side'>
-        <div class='author'>
-            <?php
-            echo $row["artist"];
-            ?>
-        </div>
-        <div class='name'>
-            <?php
-            echo $row["title"];
-            ?>
-        </div>
-        <div class='price'>
-            <?php
-            echo 'Price:' . $row["price"];
-            ?>
-        </div>
-        <div class='description'>
-            <?php
-            echo $row["description"];
-            ?>
-        </div>
+        <div class='author'>$author</div>
+        <div class='name'>$name </div>
+        <div class='price'>Price: $price </div>
+        <div class='description'>$description </div>
     </div>
-</div>
+    </div>";
+}
+?>
 
 <div class="pagination">
     <ul class="pagination">
@@ -119,4 +108,3 @@ WHERE title like '%$key%' ORDER BY price");
 </footer>
 </body>
 </html>
-

@@ -18,7 +18,6 @@ WHERE artworkID='$id'");
 mysqli_query($con,"UPDATE artworks SET view =view+1
 WHERE artworkID='$id'");
 $row = mysqli_fetch_array($result);
-//$row["view"] += 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
